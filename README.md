@@ -1,5 +1,18 @@
 # PilotProject
 
+<h1>Angular Front End - User login</h1>
+<h2>Scope of the project:</h2>
+<h3>Develop login component and UI</h3>
+<blockquote>
+<p>Working with ngModule for data binding between component and UI element.</p>
+</blockquote>
+<h3>Develop create user component and UI.</h3>
+<blockquote>
+<p>Working with ngModule for data binding between component and UI element</p>
+</blockquote>
+<h3>Add routing capability betweeen login and create User UI</h3>
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
 
 ## Development server
