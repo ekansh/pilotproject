@@ -1,0 +1,54 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" #createUserFormRef="ngForm">
+        <div class="form-group">
+            <label for="FirstName">FirstName</label>
+            <input type="text" id="firstname" name="firstname" class="form-control" required
+            [(ngModel)]="firstname"  #firstnameRef="ngModel"/>  
+             <div [hidden]="firstnameRef.valid || firstnameRef.pristine" class="alert alert-danger" >
+                First Name is required
+            </div>
+         </div>
+          <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" class="form-control" required
+            [(ngModel)]="lastname"  #lastnameRef="ngModel"/>  
+             <div [hidden]="lastnameRef.valid || lastnameRef.pristine" class="alert alert-danger" >
+              Last Name is required
+            </div>
+         </div>
+         <div class="form-group">
+            <label for="email">e-mail</label>
+            <input type="email" id="email" name="email" class="form-control" required
+            [(ngModel)]="email"  #emailRef="ngModel"/>  
+             <div [hidden]="emailRef.valid || emailRef.pristine" class="alert alert-danger" >
+              Last Name is required
+            </div>
+         </div>
+        
+        <div class="form-group">
+          <label for="username">Username</label>
+            <input type="text" id="username" name="username" class="form-control" required
+            [(ngModel)]="username" #usernameRef="ngModel"/>
+            <div [hidden]="usernameRef.valid || usernameRef.pristine" class="alert alert-danger" >
+                Username is required
+            </div>  
+        </div>
+       <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" class="form-control" required
+            [(ngModel)]="password"  #passwordRef="ngModel"/>  
+             <div [hidden]="passwordRef.valid || passwordRef.pristine" class="alert alert-danger" >
+                password is required
+            </div>
+         </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required
+            [(ngModel)]="confirmPassword"  #confirmPasswordRef="ngModel"/>  
+             <div [hidden]="confirmPasswordRef.valid || confirmPasswordRef.pristine" class="alert alert-danger" >
+                password is required
+            </div>
+         </div>
+        <button type="submit" class="btn btn-success" [disabled]="!createUserFormRef.form.valid">Submit</button>
+    </form>
+</div>
